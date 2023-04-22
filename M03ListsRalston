@@ -1,0 +1,33 @@
+class vehicle:
+    def __init__(self, vtype):
+
+        self.vtype = vtype
+
+        
+class automobile (vehicle):
+
+    def __init__ (self, vtype, year, make, model, doors, roof):
+        
+        vehicle.__init__(self, vtype)
+        self.year = year
+        self.make = make
+
+
+        self.model = model
+        self.doors = doors 
+        self.roof = roof
+        
+vtype = "car"
+year = input ("Year: ")
+make = input("Make: ")
+model = input("Model: ")
+doors = input("How many doors? ")
+roof = input ("What type of roof? ")
+
+car = automobile(vtype, year, make, model, doors, roof)
+
+print("Vehicle Type: ", car.vtype)
+print("Make:", car.make)
+print("Model: ", car.model)
+print ("Doors: ", car.doors)
+print ("Roof: ", car.roof)
